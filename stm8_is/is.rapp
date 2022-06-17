@@ -1,0 +1,71 @@
+
+<ApplicationBuild Header="is" Extern=".\is.rapp" Path=".\is.rapp" OutputFile=".\bin\is.aof" sate="96" >
+	<Group Header="Исходный код" Marker="-1" OutputFile="" sate="96" >
+		<NodeC Path=".\main.c" Header="main.c" Marker="-1" OutputFile=".\bin\main.obj" sate="2" />
+		<NodeC Path=".\protocol_is.c" Header="protocol_is.c" Marker="-1" OutputFile=".\bin\protocol_is.obj" sate="0" >
+			<Options/>
+		</NodeC>
+		<NodeC Path=".\angle.c" Header="angle.c" Marker="-1" OutputFile=".\bin\angle.obj" sate="0" />
+		<NodeC Path=".\step_motor.c" Header="step_motor.c" Marker="-1" OutputFile=".\bin\step_motor.obj" sate="0" />
+		<NodeC Path=".\signals.c" Header="signals.c" Marker="-1" OutputFile=".\bin\signals.obj" sate="0" />
+		<NodeC Path=".\uart3.c" Header="uart3.c" Marker="-1" OutputFile=".\bin\uart3.obj" sate="0" />
+		<NodeC Path=".\kma210.c" Header="kma210.c" Marker="-1" OutputFile=".\bin\kma210.obj" sate="0" />
+	</Group>
+	<Group Header="Библиотека" Marker="-1" OutputFile="" sate="0" >
+		<NodeC Path="..\library\src\stm8s_clk.c" Header="stm8s_clk.c" Marker="-1" OutputFile=".\bin\stm8s_clk.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_gpio.c" Header="stm8s_gpio.c" Marker="-1" OutputFile=".\bin\stm8s_gpio.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_rst.c" Header="stm8s_rst.c" Marker="-1" OutputFile=".\bin\stm8s_rst.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_spi.c" Header="stm8s_spi.c" Marker="-1" OutputFile=".\bin\stm8s_spi.obj" sate="0" />
+		<NodeC Path=".\stm8s_it.c" Header="stm8s_it.c" Marker="-1" OutputFile=".\bin\stm8s_it.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_itc.c" Header="stm8s_itc.c" Marker="-1" OutputFile=".\bin\stm8s_itc.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_flash.c" Header="stm8s_flash.c" Marker="-1" OutputFile=".\bin\stm8s_flash.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_exti.c" Header="stm8s_exti.c" Marker="-1" OutputFile=".\bin\stm8s_exti.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_uart3.c" Header="stm8s_uart3.c" Marker="-1" OutputFile=".\bin\stm8s_uart3.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_adc2.c" Header="stm8s_adc2.c" Marker="-1" OutputFile=".\bin\stm8s_adc2.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_uart1.c" Header="stm8s_uart1.c" Marker="-1" OutputFile=".\bin\stm8s_uart1.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_tim1.c" Header="stm8s_tim1.c" Marker="-1" OutputFile=".\bin\stm8s_tim1.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_tim2.c" Header="stm8s_tim2.c" Marker="-1" OutputFile=".\bin\stm8s_tim2.obj" sate="0" />
+	</Group>
+	<Group Header="Заголовочные файлы" Marker="-1" OutputFile="" sate="96" >
+		<NodeH Path=".\step_motor.h" Header="step_motor.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path=".\protocol_is.h" Header="protocol_is.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path=".\stm8s_conf.h" Header="stm8s_conf.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path=".\angle.h" Header="angle.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path=".\signals.h" Header="signals.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path="..\library\inc\stm8s.h" Header="stm8s.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path=".\kma210.h" Header="kma210.h" Marker="-1" OutputFile="" sate="0" />
+	</Group>
+	<Options>
+		<Config Header="Standard" >
+			<Set Header="ApplicationBuild" >
+				<Section Header="General" >
+					<Property Header="TargetFamily" Value="ST7" />
+				</Section>
+				<Section Header="Directories" >
+					<Property Header="IncDir" Value="..\library\inc;$(RkitInc);$(RkitInc)\ST7;$(RkitInc)\STM8" Removable="1" />
+					<Property Header="OutDir" Value="$(ApplicationDir)\bin" Removable="1" />
+					<Property Header="ListDir" Value="$(ApplicationDir)\bin" Removable="1" />
+				</Section>
+			</Set>
+			<Set Header="Target" >
+				<Section Header="ProcessorST7" >
+					<Property Header="Processor" Value="STM8S207K6" Removable="1" />
+				</Section>
+				<Section Header="ToolSetST7" >
+					<Property Header="BuildToolSetST7" Value="ST7\RaisonanceTools.config" Removable="1" />
+					<Property Header="ArelocInfo" Value="" Removable="1" />
+				</Section>
+			</Set>
+			<Set Header="RLST7" >
+				<Section Header="Output" >
+					<Property Header="ExtendedBin" Value="" Removable="1" />
+				</Section>
+			</Set>
+			<Set Header="RCST7" >
+				<Section Header="OPTIM" >
+					<Property Header="OTLEVEL" Value="2" Removable="1" />
+				</Section>
+			</Set>
+		</Config>
+	</Options>
+</ApplicationBuild>
